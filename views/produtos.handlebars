@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="container">
+
+        
+        {{#each produtos}}
+        <div class="card">
+            
+<span class="id">{{this.id}}</span>
+                <div class="linkImg">
+                    
+                    <a href="#">
+                        <img src={{this.imagem}} alt="">
+                    </a>
+                </div>
+
+                <div class="conteudo">
+                    <h3>{{this.nome}}</h3>
+                    <span class="desc">{{this.descricao}}</span>
+                    <span class="preco">
+                    <h2>R$ {{this.preco}}</h2>
+                    </span>
+                </div>
+            
+            <a class="btnPedir" href="produto/{{this.id}}">Pedir</a>
+            
+        </div>
+        {{/each}}
+
+    </div>
+</body>
+</html>
